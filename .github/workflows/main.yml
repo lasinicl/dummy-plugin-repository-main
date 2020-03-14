@@ -13,7 +13,7 @@ jobs:
     - uses: eskatos/gradle-command-action@v1
       with:
         wrapper-directory: tools-plugin/intellij
-        arguments: buildPlugin
+        arguments: buildPlugin --stacktrace
     - uses: eskatos/gradle-command-action@v1
       with:
         wrapper-directory: tools-plugin/intellij
