@@ -783,3 +783,112 @@ Max     duration: 0ms (it was 'null')
 2020-03-12 12:08:54,672 [  35664]   INFO - plication.impl.ApplicationImpl - Global instance threads created counter = 9; ProcessIOExecutorService threads: 0 
 2020-03-12 12:08:54,674 [  35666]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
 2020-03-12 12:08:54,681 [  35673]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2020-03-14 14:37:48,003 [      0]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE STARTED ------------------------------------------------------ 
+2020-03-14 14:37:48,460 [    457]   INFO -        #com.intellij.idea.Main - IDE: IntelliJ IDEA (build #IC-193.6494.35, 11 Feb 2020 11:03) 
+2020-03-14 14:37:48,494 [    491]   INFO -        #com.intellij.idea.Main - OS: Linux (4.15.0-88-generic, amd64) 
+2020-03-14 14:37:48,494 [    491]   INFO -        #com.intellij.idea.Main - JRE: 11.0.5+10-b520.38 (JetBrains s.r.o) 
+2020-03-14 14:37:48,494 [    491]   INFO -        #com.intellij.idea.Main - JVM: 11.0.5+10-b520.38 (OpenJDK 64-Bit Server VM) 
+2020-03-14 14:37:48,495 [    492]   INFO -        #com.intellij.idea.Main - JVM Args: -Didea.classpath.index.enabled=false -Didea.config.path=/home/lasini/Documents/myPluginRepo2/tools-plugin/intellij/build/idea-sandbox/config -Didea.is.internal=true -Didea.platform.prefix=Idea -Didea.plugins.path=/home/lasini/Documents/myPluginRepo2/tools-plugin/intellij/build/idea-sandbox/plugins -Didea.required.plugins.id=org.example.myPlugin18 -Didea.system.path=/home/lasini/Documents/myPluginRepo2/tools-plugin/intellij/build/idea-sandbox/system -Dsun.awt.disablegrab=true -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant -ea 
+2020-03-14 14:37:48,495 [    492]   INFO -        #com.intellij.idea.Main - charsets: JNU=UTF-8 file=UTF-8 
+2020-03-14 14:37:48,521 [    518]   INFO -        #com.intellij.idea.Main - JNA library (64-bit) loaded in 495 ms 
+2020-03-14 14:37:48,584 [    581]   INFO - ntellij.idea.ApplicationLoader - CPU cores: 4; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@398a5888[Running, parallelism = 4, size = 0, active = 0, running = 0, steals = 0, tasks = 0, submissions = 0]; factory: com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory@2efbffc8 
+2020-03-14 14:37:50,480 [   2477]   INFO - llij.ide.plugins.PluginManager - Plugin "Groovy" misses optional descriptor duplicates-groovy.xml 
+2020-03-14 14:37:50,482 [   2479]   INFO - llij.ide.plugins.PluginManager - Plugin "Groovy" misses optional descriptor duplicates-detection-groovy.xml 
+2020-03-14 14:37:57,627 [   9624]   INFO - llij.ide.plugins.PluginManager - Plugin "Java" misses optional descriptor profiler-java.xml 
+2020-03-14 14:37:57,716 [   9713]   INFO - llij.ide.plugins.PluginManager - Loaded bundled plugins: Android Support (10.3.5), Ant (193.6494.35), Bytecode Viewer (193.6494.35), ChangeReminder (193.6494.35), Configuration Script (193.6494.35), Copyright (193.6494.35), Coverage (193.6494.35), Eclipse Interoperability (193.6494.35), EditorConfig (193.6494.35), Git (193.6494.35), GitHub (193.6494.35), Gradle (193.6494.35), Gradle-Java (193.6494.35), Gradle-Maven (193.6494.35), Groovy (193.6494.35), IDEA CORE (193.6494.35), IntelliLang (193.6494.35), JUnit (193.6494.35), Java (193.6494.35), Java Bytecode Decompiler (193.6494.35), Java IDE Customization (193.6494.35), Java Internationalization (193.6494.35), Java Stream Debugger (193.6494.35), JavaFX (193.6494.35), Kotlin (1.3.61-release-IJ2019.3-1), Machine Learning Code Completion (193.6494.35), Markdown (193.6494.35), Maven (193.6494.35), Mercurial (193.6494.35), Plugin DevKit (193.6494.35), Properties (193.6494.35), Settings Repository (193.6494.35), Shell Script (193.6494.35), Smali Support (193.6494.35), Subversion (193.6494.35), Task Management (193.6494.35), Terminal (193.6494.35), TestNG (193.6494.35), TextMate bundles (193.6494.35), UI Designer (193.6494.35), XPathView + XSLT (193.6494.35), XSLT Debugger (193.6494.35), YAML (193.6494.35) 
+2020-03-14 14:37:57,716 [   9713]   INFO - llij.ide.plugins.PluginManager - Loaded custom plugins: myPlugin (1.0.2-SNAPSHOT) 
+2020-03-14 14:38:02,497 [  14494]   INFO - ellij.util.io.PagedFileStorage - lower=100; upper=492; buffer=10; max=492 
+2020-03-14 14:38:02,556 [  14553]   INFO - tellij.util.io.FileChannelUtil - un-interruptible FileChannel-s will be used for indexes 
+2020-03-14 14:38:02,620 [  14617]   INFO - com.intellij.util.ui.JBUIScale - System scale factor: 1.0 (IDE-managed HiDPI) 
+2020-03-14 14:38:02,791 [  14788]   INFO - pi.util.registry.RegistryState - Registry values changed by user: java.completion.argument.hints.internal = false 
+2020-03-14 14:38:02,793 [  14790]   INFO - rains.ide.BuiltInServerManager - built-in server started, port 63342 
+2020-03-14 14:38:02,816 [  14813]   INFO - pl.local.NativeFileWatcherImpl - Native file watcher is disabled 
+2020-03-14 14:38:02,880 [  14877]   INFO - pi.util.registry.RegistryState - Experimental features enabled for user: wsl.p9.support, wsl.p9.show.roots.in.file.chooser, inline.browse.button, linux.native.menu, recent.and.edited.files.together, show.create.new.element.in.popup, copy.reference.popup, new.large.text.file.viewer, property.value.inplace.editing 
+2020-03-14 14:38:03,286 [  15283]   INFO - til.net.ssl.CertificateManager - Default SSL context initialized 
+2020-03-14 14:38:04,571 [  16568]   WARN - ConfigurableExtensionPointUtil - ignore deprecated groupId: language for id: preferences.language.Kotlin.scripting 
+2020-03-14 14:38:04,583 [  16580]   INFO - pl$FileIndexDataInitialization - Initialization done: 1606 
+2020-03-14 14:38:04,759 [  16756]   INFO - exImpl$StubIndexInitialization - Initialization done: 175 
+2020-03-14 14:38:06,923 [  18920]   INFO - CompilerWorkspaceConfiguration - Available processors: 4 
+2020-03-14 14:38:15,968 [  27965]   INFO - com.intellij.ide.ui.UISettings - Loaded: fontSize=12, fontScale=1.0; restored: fontSize=12, fontScale=1.0 
+2020-03-14 14:38:21,052 [  33049]   INFO - j.ide.plugins.RepositoryHelper - using cached plugin list (updated at 3/14/20, 2:38 PM) 
+2020-03-14 14:38:21,105 [  33102]   INFO - j.ide.plugins.RepositoryHelper - using cached plugin list (updated at 3/14/20, 2:38 PM) 
+2020-03-14 14:38:22,859 [  34856]   INFO - leScriptDefinitionsContributor - [kts] error loading gradle script templates: Project 'Default (Template) Project' isn't linked with Gradle 
+2020-03-14 14:38:22,866 [  34863]   INFO - leScriptDefinitionsContributor - [kts] error loading gradle script templates: Project 'Default (Template) Project' isn't linked with Gradle 
+2020-03-14 14:38:22,866 [  34863]   INFO - leScriptDefinitionsContributor - [kts] error loading gradle script templates: Project 'Default (Template) Project' isn't linked with Gradle 
+2020-03-14 14:38:25,439 [  37436]   INFO - rationStore.ComponentStoreImpl - Saving appFileBasedIndex took 24 ms, FileTypeManager took 12 ms 
+2020-03-14 14:38:25,559 [  37556]   INFO - Types.impl.FileTypeManagerImpl - 0 auto-detected files. Detection took 0 ms 
+2020-03-14 14:38:25,559 [  37556]   INFO - stubs.SerializationManagerImpl - START StubSerializationManager SHUTDOWN 
+2020-03-14 14:38:25,563 [  37560]   INFO - stubs.SerializationManagerImpl - END StubSerializationManager SHUTDOWN 
+2020-03-14 14:38:25,564 [  37561]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2020-03-14 14:38:25,564 [  37561]   INFO - il.indexing.FileBasedIndexImpl - START INDEX SHUTDOWN 
+2020-03-14 14:38:25,598 [  37595]   INFO - il.indexing.FileBasedIndexImpl - END INDEX SHUTDOWN 
+2020-03-14 14:38:25,598 [  37595]   INFO - newvfs.persistent.PersistentFS - VFS dispose started 
+2020-03-14 14:38:25,619 [  37616]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
+2020-03-14 14:38:25,958 [  37955]   INFO - plication.impl.ApplicationImpl - Write action Statistics:
+Event number:     0
+Total time spent: 0ms
+Average duration: 0ms
+Median  duration: 0ms
+Max     duration: 0ms (it was 'null') 
+2020-03-14 14:38:25,958 [  37955]   INFO - plication.impl.ApplicationImpl - AnAction.update() Statistics:
+Event number:     0
+Total time spent: 0ms
+Average duration: 0ms
+Median  duration: 0ms
+Max     duration: 0ms (it was 'null') 
+2020-03-14 14:38:25,958 [  37955]   INFO - plication.impl.ApplicationImpl - Global instance threads created counter = 8; ProcessIOExecutorService threads: 0 
+2020-03-14 14:38:25,968 [  37965]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
+2020-03-14 14:38:25,969 [  37966]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2020-03-14 15:23:57,608 [      0]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE STARTED ------------------------------------------------------ 
+2020-03-14 15:23:57,653 [     45]   INFO - ntellij.idea.ApplicationLoader - CPU cores: 4; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@a6cd3ee[Running, parallelism = 4, size = 0, active = 0, running = 0, steals = 0, tasks = 0, submissions = 0]; factory: com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory@40649fc1 
+2020-03-14 15:23:57,772 [    164]   INFO -        #com.intellij.idea.Main - IDE: IntelliJ IDEA (build #IC-193.6494.35, 11 Feb 2020 11:03) 
+2020-03-14 15:23:57,773 [    165]   INFO -        #com.intellij.idea.Main - OS: Linux (4.15.0-88-generic, amd64) 
+2020-03-14 15:23:57,773 [    165]   INFO -        #com.intellij.idea.Main - JRE: 11.0.5+10-b520.38 (JetBrains s.r.o) 
+2020-03-14 15:23:57,773 [    165]   INFO -        #com.intellij.idea.Main - JVM: 11.0.5+10-b520.38 (OpenJDK 64-Bit Server VM) 
+2020-03-14 15:23:57,804 [    196]   INFO -        #com.intellij.idea.Main - JVM Args: -Didea.classpath.index.enabled=false -Didea.config.path=/home/lasini/Documents/myPluginRepo2/tools-plugin/intellij/build/idea-sandbox/config -Didea.is.internal=true -Didea.platform.prefix=Idea -Didea.plugins.path=/home/lasini/Documents/myPluginRepo2/tools-plugin/intellij/build/idea-sandbox/plugins -Didea.required.plugins.id=org.example.myPlugin18 -Didea.system.path=/home/lasini/Documents/myPluginRepo2/tools-plugin/intellij/build/idea-sandbox/system -Dsun.awt.disablegrab=true -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant -ea 
+2020-03-14 15:23:57,813 [    205]   INFO -        #com.intellij.idea.Main - charsets: JNU=UTF-8 file=UTF-8 
+2020-03-14 15:23:57,968 [    360]   INFO -        #com.intellij.idea.Main - JNA library (64-bit) loaded in 333 ms 
+2020-03-14 15:23:58,412 [    804]   INFO - llij.ide.plugins.PluginManager - Plugin "Groovy" misses optional descriptor duplicates-groovy.xml 
+2020-03-14 15:23:58,413 [    805]   INFO - llij.ide.plugins.PluginManager - Plugin "Groovy" misses optional descriptor duplicates-detection-groovy.xml 
+2020-03-14 15:23:58,618 [   1010]   INFO - llij.ide.plugins.PluginManager - Plugin "Java" misses optional descriptor profiler-java.xml 
+2020-03-14 15:23:58,716 [   1108]   INFO - llij.ide.plugins.PluginManager - Loaded bundled plugins: Android Support (10.3.5), Ant (193.6494.35), Bytecode Viewer (193.6494.35), ChangeReminder (193.6494.35), Configuration Script (193.6494.35), Copyright (193.6494.35), Coverage (193.6494.35), Eclipse Interoperability (193.6494.35), EditorConfig (193.6494.35), Git (193.6494.35), GitHub (193.6494.35), Gradle (193.6494.35), Gradle-Java (193.6494.35), Gradle-Maven (193.6494.35), Groovy (193.6494.35), IDEA CORE (193.6494.35), IntelliLang (193.6494.35), JUnit (193.6494.35), Java (193.6494.35), Java Bytecode Decompiler (193.6494.35), Java IDE Customization (193.6494.35), Java Internationalization (193.6494.35), Java Stream Debugger (193.6494.35), JavaFX (193.6494.35), Kotlin (1.3.61-release-IJ2019.3-1), Machine Learning Code Completion (193.6494.35), Markdown (193.6494.35), Maven (193.6494.35), Mercurial (193.6494.35), Plugin DevKit (193.6494.35), Properties (193.6494.35), Settings Repository (193.6494.35), Shell Script (193.6494.35), Smali Support (193.6494.35), Subversion (193.6494.35), Task Management (193.6494.35), Terminal (193.6494.35), TestNG (193.6494.35), TextMate bundles (193.6494.35), UI Designer (193.6494.35), XPathView + XSLT (193.6494.35), XSLT Debugger (193.6494.35), YAML (193.6494.35) 
+2020-03-14 15:23:58,716 [   1108]   INFO - llij.ide.plugins.PluginManager - Loaded custom plugins: myPlugin (1.0.2-SNAPSHOT) 
+2020-03-14 15:23:59,490 [   1882]   INFO - ellij.util.io.PagedFileStorage - lower=100; upper=492; buffer=10; max=492 
+2020-03-14 15:23:59,512 [   1904]   INFO - tellij.util.io.FileChannelUtil - un-interruptible FileChannel-s will be used for indexes 
+2020-03-14 15:23:59,580 [   1972]   INFO - com.intellij.util.ui.JBUIScale - System scale factor: 1.0 (IDE-managed HiDPI) 
+2020-03-14 15:23:59,599 [   1991]   INFO - pi.util.registry.RegistryState - Registry values changed by user: java.completion.argument.hints.internal = false 
+2020-03-14 15:23:59,643 [   2035]   INFO - rains.ide.BuiltInServerManager - built-in server started, port 63342 
+2020-03-14 15:23:59,646 [   2038]   INFO - pi.util.registry.RegistryState - Experimental features enabled for user: wsl.p9.support, wsl.p9.show.roots.in.file.chooser, inline.browse.button, linux.native.menu, recent.and.edited.files.together, show.create.new.element.in.popup, copy.reference.popup, new.large.text.file.viewer, property.value.inplace.editing 
+2020-03-14 15:23:59,737 [   2129]   INFO - pl.local.NativeFileWatcherImpl - Native file watcher is disabled 
+2020-03-14 15:23:59,954 [   2346]   INFO - til.net.ssl.CertificateManager - Default SSL context initialized 
+2020-03-14 15:24:00,859 [   3251]   WARN - ConfigurableExtensionPointUtil - ignore deprecated groupId: language for id: preferences.language.Kotlin.scripting 
+2020-03-14 15:24:01,075 [   3467]   INFO - pl$FileIndexDataInitialization - Initialization done: 1287 
+2020-03-14 15:24:01,272 [   3664]   INFO - exImpl$StubIndexInitialization - Initialization done: 197 
+2020-03-14 15:24:03,171 [   5563]   INFO - CompilerWorkspaceConfiguration - Available processors: 4 
+2020-03-14 15:24:05,514 [   7906]   INFO - com.intellij.ide.ui.UISettings - Loaded: fontSize=12, fontScale=1.0; restored: fontSize=12, fontScale=1.0 
+2020-03-14 15:24:13,364 [  15756]   INFO - leScriptDefinitionsContributor - [kts] error loading gradle script templates: Project 'Default (Template) Project' isn't linked with Gradle 
+2020-03-14 15:24:13,370 [  15762]   INFO - leScriptDefinitionsContributor - [kts] error loading gradle script templates: Project 'Default (Template) Project' isn't linked with Gradle 
+2020-03-14 15:24:13,370 [  15762]   INFO - leScriptDefinitionsContributor - [kts] error loading gradle script templates: Project 'Default (Template) Project' isn't linked with Gradle 
+2020-03-14 15:24:16,252 [  18644]   INFO - Types.impl.FileTypeManagerImpl - 0 auto-detected files. Detection took 0 ms 
+2020-03-14 15:24:16,252 [  18644]   INFO - stubs.SerializationManagerImpl - START StubSerializationManager SHUTDOWN 
+2020-03-14 15:24:16,261 [  18653]   INFO - stubs.SerializationManagerImpl - END StubSerializationManager SHUTDOWN 
+2020-03-14 15:24:16,261 [  18653]   INFO - il.indexing.FileBasedIndexImpl - START INDEX SHUTDOWN 
+2020-03-14 15:24:16,295 [  18687]   INFO - il.indexing.FileBasedIndexImpl - END INDEX SHUTDOWN 
+2020-03-14 15:24:16,295 [  18687]   INFO - newvfs.persistent.PersistentFS - VFS dispose started 
+2020-03-14 15:24:16,306 [  18698]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
+2020-03-14 15:24:16,656 [  19048]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
+2020-03-14 15:24:16,661 [  19053]   INFO - plication.impl.ApplicationImpl - Write action Statistics:
+Event number:     0
+Total time spent: 0ms
+Average duration: 0ms
+Median  duration: 0ms
+Max     duration: 0ms (it was 'null') 
+2020-03-14 15:24:16,661 [  19053]   INFO - plication.impl.ApplicationImpl - AnAction.update() Statistics:
+Event number:     0
+Total time spent: 0ms
+Average duration: 0ms
+Median  duration: 0ms
+Max     duration: 0ms (it was 'null') 
+2020-03-14 15:24:16,662 [  19054]   INFO - plication.impl.ApplicationImpl - Global instance threads created counter = 8; ProcessIOExecutorService threads: 0 
+2020-03-14 15:24:16,670 [  19062]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
+2020-03-14 15:24:16,671 [  19063]   INFO - org.jetbrains.io.BuiltInServer - web server stopped 
