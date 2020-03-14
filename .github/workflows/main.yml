@@ -13,3 +13,6 @@ jobs:
     - name: Build with gradle
       working-directory: tools-plugin/intellij
       run: ./gradlew buildPlugin
+    - name: Publish plugin
+      working-directory: /tools-plugin/intellij
+      run: ./gradlew publishPlugin
