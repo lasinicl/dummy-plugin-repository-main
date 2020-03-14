@@ -14,5 +14,5 @@ jobs:
       working-directory: tools-plugin/intellij
       run: ./gradlew buildPlugin
     - name: Publish plugin
-      working-directory: /tools-plugin/intellij
+      working-directory: tools-plugin/intellij/distributions
       run: ./gradlew publishPlugin
