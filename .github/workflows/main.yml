@@ -1,4 +1,4 @@
-on: push
+on: [repository_dispatch]
 jobs:
   gradle:
     strategy:
@@ -16,7 +16,4 @@ jobs:
     - name: Publish plugin
       working-directory: tools-plugin/intellij
       run: ./gradlew publishPlugin
-    - uses: actions/download-artifact@v1
-      with:
-        name: my-artifact
       
