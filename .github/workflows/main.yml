@@ -6,9 +6,15 @@ jobs:
         os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
     steps:
+    - name: Get ballerina version
+      run: |
+           version=master
+           BAL_VERSION=${version}
+           echo "::set-env name=ballerina_version::$BAL_VERSION"
     - uses: actions/checkout@v2
       with:
         repository: lasinicl/dummy-plugin-repository-main
+        ref: $ballerina_version
     - uses: actions/setup-java@v1
       with:
         java-version: 1.8
