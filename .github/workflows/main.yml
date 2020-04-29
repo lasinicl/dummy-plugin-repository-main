@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        repository: lasinicl/ballerina-lang
+        repository: lasinicl/dummy-plugin-repository-main
     - uses: actions/setup-java@v1
       with:
         java-version: 1.8
