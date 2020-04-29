@@ -8,8 +8,7 @@ jobs:
     steps:
     - name: Get ballerina version
       run: |
-           version=dummyBranch
-           BAL_VERSION=${version}
+           BAL_VERSION=dummyBranch
            echo "::set-env name=ballerina_version::$BAL_VERSION"
     - uses: actions/checkout@v2
       with:
