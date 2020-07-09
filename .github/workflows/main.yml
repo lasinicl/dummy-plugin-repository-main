@@ -30,6 +30,10 @@ jobs:
         echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_241' >> ~/.bashrc
         echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_241/bin' >> ~/.bashrc
         source ~/.bashrc
+        sudo update-alternatives --install "/usr/bin/java" "java" "$JDK_PATH/jdk1.8.0_241/bin/java" 0
+        sudo update-alternatives --install "/usr/bin/javac" "javac" "$JDK_PATH/jdk1.8.0_241/bin/javac" 0
+        sudo update-alternatives --set java $JDK_PATH/jdk1.8.0_241/bin/java
+        sudo update-alternatives --set javac $JDK_PATH/jdk1.8.0_241/bin/javac    
         java -version
 
     - name: Clone ballerina-lang repo
@@ -37,7 +41,7 @@ jobs:
          git clone https://github.com/lasinicl/dummy-plugin-repository-main
          version=1.2.3
          BAL_VERSION="v${version}"
-         git checkout $BAL_VERSION
+         git checkout tags/BAL_VERSION
           
     - name: Build and publish plugin
       run: |
