@@ -26,7 +26,7 @@ jobs:
         pwd
         sudo mkdir jdk8-dir
         cd jdk8-dir
-        sudo tar -xvzf ~/Downloads/jdk-8u241-linux-x64.tar.gz
+        sudo tar -xvzf /home/runner/work/dummy-plugin-repository-main/dummy-plugin-repository-main/jdk-8u241-linux-x64.tar.gz
         echo 'export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_251' >> ~/.bashrc
         echo 'export PATH=$PATH:/usr/lib/jvm/jdk1.8.0_251/bin' >> ~/.bashrc
 
