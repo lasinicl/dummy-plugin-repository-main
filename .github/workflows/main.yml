@@ -47,6 +47,10 @@ jobs:
 
     - name: Build and publish plugin
       run: |
-        cd tools-plugin/intellij/
+        version=1.2.5
+        BAL_VERSION="v${version}"
+
+        cd dummy-plugin-repository-main/tools-plugin/intellij/
+        git checkout $BAL_VERSION
         ./gradlew buildPlugin 
         ./gradlew publishPlugin -PintellijPublishToken=${{ secrets.IDEA_TOKEN }}
