@@ -40,7 +40,7 @@ jobs:
       run: |
          git clone https://github.com/lasinicl/dummy-plugin-repository-main
          version=1.2.5
-         BAL_VERSION="V${version}"
+         BAL_VERSION="v${version}"
          git checkout tags/$BAL_VERSION
           
     - name: Build and publish plugin
