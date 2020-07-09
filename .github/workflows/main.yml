@@ -24,11 +24,11 @@ jobs:
         sudo apt-get install wget
         mkdir jdk8-dir
         cd jdk8-dir
-        wget http://enos.itcollege.ee/~jpoial/allalaadimised/jdk8/jdk-8u241-linux-x64.tar.gz
+        wget --continue --no-check-certificate https://download.oracle.com/otn/java/jdk/8u241-b07/1f5b5a70bf22433b84d0e960903adac8/jdk-8u241-linux-x64.tar.gz?AuthParam=1585407406_a8cffe5669b296011aa5166b19137155
         JDK_PATH=$PWD
         sudo tar -xvzf jdk-8u241-linux-x64.tar.gz
-        echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_241' >> ~/.bashrc
-        echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_241/bin' >> ~/.bashrc
+        echo 'export JAVA_HOME=$PWD/jdk1.8.0_241' >> ~/.bashrc
+        echo 'export PATH=$PATH:/jdk1.8.0_241/bin' >> ~/.bashrc
         source ~/.bashrc
         sudo update-alternatives --install "/usr/bin/java" "java" "$JDK_PATH/jdk1.8.0_241/bin/java" 0
         sudo update-alternatives --install "/usr/bin/javac" "javac" "$JDK_PATH/jdk1.8.0_241/bin/javac" 0
