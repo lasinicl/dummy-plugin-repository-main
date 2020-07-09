@@ -21,7 +21,8 @@ jobs:
 
     - name: Set up JDK 1.8
       run: |
-        wget -q http://www.oracle.com/technetwork/java/javase/downloads/index.html -O ./index.html && grep -Eoi ']+>' index.html | grep -Eoi '/technetwork/java/javase/downloads/jdk8-downloads-[0-9]+.html' | (head -n 1) | awk '{print "http://www.oracle.com"$1}' | xargs wget --no-cookies --header "Cookie: gpw_e24=xxx; oraclelicense=accept-securebackup-cookie;" -O index.html -q && grep -Eoi '"filepath":"[^"]+jdk-8u251+-linux-x64.tar.gz"' index.html | grep -Eoi 'http:[^"]+' | xargs wget --no-cookies --header "Cookie: gpw_e24=xxx; oraclelicense=accept-securebackup-cookie;" -q -O ./jdk8.rpm && sudo rpm -i ./jdk8.rpm
+        sudo apt-get install wget
+        wget --continue --no-check-certificate https://download.oracle.com/otn/java/jdk/8u241-b07/1f5b5a70bf22433b84d0e960903adac8/jdk-8u241-linux-x64.tar.gz?AuthParam=1585407406_a8cffe5669b296011aa5166b19137155
         sudo mkdir /usr/lib/jvm
         cd /usr/lib/jvm
         sudo tar -xvzf ~/Downloads/jdk-8u251-linux-x64.tar.gz
