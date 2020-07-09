@@ -12,10 +12,7 @@ jobs:
       uses: actions/checkout@v2
                   
     - name: Install jq for json manipulation
-      run: |
-        sudo apt-get install jq
-        version=1.2.5
-        BAL_VERSION="v${version}"
+      run: sudo apt-get install jq
         
     - name: Use Node.js
       uses: actions/setup-node@v1
@@ -39,11 +36,8 @@ jobs:
         sudo update-alternatives --set javac $JDK_PATH/jdk1.8.0_241/bin/javac    
         java -version
         
-    - name: Checkout code
-      uses: actions/checkout@v2
-      with:
-        repository: lasinicl/dummy-plugin-repository-main
-        ref: $BAL_VERSION
+    - name: Clone ballerina-lang repo
+      run: git clone https://github.com/lasinicl/dummy-plugin-repository-main.git
 
     - name: Build and publish plugin
       run: |
