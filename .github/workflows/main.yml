@@ -37,7 +37,7 @@ jobs:
       run: |
         version=1.1
         BAL_VERSION="V${version}"
-        cd tools-plugin/intellij/
         git checkout $BAL_VERSION
+        cd tools-plugin/intellij/
         ./gradlew buildPlugin 
         ./gradlew publishPlugin -PintellijPublishToken=${{ secrets.IDEA_TOKEN }}
