@@ -1,26 +1,46 @@
-on: pull
+name: Publish Intellij Plugin
+
+on:
+  push
+    
 jobs:
-  gradle:
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-    runs-on: ${{ matrix.os }}
+  publish_idea_plugin:
+    runs-on: ubuntu-latest
+
     steps:
-    - name: Get ballerina version
-      run: |
-           version=1.1
-           BAL_VERSION="V$version"
-           echo "::set-env name=ballerina_version::$BAL_VERSION"
-    - uses: actions/checkout@v2
-      with:
-        repository: lasinicl/dummy-plugin-repository-main
-        ref: ${{ env.ballerina_version }} 
-    - uses: actions/setup-java@v1
-      with:
-        java-version: 1.8
-    - name: Build with gradle
-      run: |
-           cd tools-plugin/intellij
-           ./gradlew buildPlugin
-           ./gradlew publishPlugin
+    - name: Checkout code
+      uses: actions/checkout@v2
+                  
+    - name: Install jq for json manipulation
+      run: sudo apt-get install jq
       
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+          node-version: '8.x'
+
+    - name: Set up JDK 1.8
+      run: |
+      wget -q http://www.oracle.com/technetwork/java/javase/downloads/index.html -O 
+      ./index.html && grep -Eoi ']+>' index.html | grep -Eoi '/technetwork/java/javase/downloads/jdk8-downloads-[0-9]+.html' | 
+      (head -n 1) | awk '{print "http://www.oracle.com"$1}' | 
+      xargs wget --no-cookies --header "Cookie: gpw_e24=xxx; oraclelicense=accept-securebackup-cookie;" -O index.html -q && 
+      grep -Eoi '"filepath":"[^"]+jdk-8u251+-linux-x64.tar.gz"' index.html | grep -Eoi 'http:[^"]+' | 
+      xargs wget --no-cookies --header "Cookie: gpw_e24=xxx; oraclelicense=accept-securebackup-cookie;" -q -O ./jdk8.rpm && sudo rpm -i ./jdk8.rpm
+      sudo mkdir /usr/lib/jvm
+      cd /usr/lib/jvm
+      sudo tar -xvzf ~/Downloads/jdk-8u251-linux-x64.tar.gz
+      echo 'export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_251' >> ~/.bashrc
+      echo 'export PATH=$PATH:/usr/lib/jvm/jdk1.8.0_251/bin' >> ~/.bashrc
+
+    - name: Clone ballerina-lang repo
+      run: git clone https://github.com/lasinicl/dummy-plugin-repository-main
+          
+    - name: Build and publish plugin
+      run: |
+        version=1.2.3
+        BAL_VERSION="v${version}"
+        cd tools-plugin/intellij/
+        git checkout $BAL_VERSION
+        ./gradlew buildPlugin 
+        ./gradlew publishPlugin -PintellijPublishToken=${{ secrets.IDEA_TOKEN }}
