@@ -25,19 +25,22 @@ jobs:
         mkdir jdk8-dir
         cd jdk8-dir
         wget http://enos.itcollege.ee/~jpoial/allalaadimised/jdk8/jdk-8u241-linux-x64.tar.gz
-        pwd
+        JDK_PATH=$PWD
         sudo tar -xvzf jdk-8u241-linux-x64.tar.gz
-        echo 'export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_241' >> ~/.bashrc
-        echo 'export PATH=$PATH:/usr/lib/jvm/jdk1.8.0_241/bin' >> ~/.bashrc
+        echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_241' >> ~/.bashrc
+        echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_241/bin' >> ~/.bashrc
+        source ~/.bashrc
+        java -version
 
     - name: Clone ballerina-lang repo
-      run: git clone https://github.com/lasinicl/dummy-plugin-repository-main
+      run: |
+         git clone https://github.com/lasinicl/dummy-plugin-repository-main
+         version=1.2.3
+         BAL_VERSION="v${version}"
+         git checkout $BAL_VERSION
           
     - name: Build and publish plugin
       run: |
-        version=1.1
-        BAL_VERSION="V${version}"
-        git checkout $BAL_VERSION
         cd tools-plugin/intellij/
         ./gradlew buildPlugin 
         ./gradlew publishPlugin -PintellijPublishToken=${{ secrets.IDEA_TOKEN }}
