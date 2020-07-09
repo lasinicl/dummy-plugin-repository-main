@@ -39,7 +39,7 @@ jobs:
     - name: Clone ballerina-lang repo
       run: |
          git clone https://github.com/lasinicl/dummy-plugin-repository-main
-         version=1.1
+         version=1.2.5
          BAL_VERSION="V${version}"
          git checkout tags/$BAL_VERSION
           
