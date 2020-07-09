@@ -22,7 +22,7 @@ jobs:
     - name: Set up JDK 1.8
       run: |
         sudo apt-get install wget
-        wget --continue --no-check-certificate https://download.oracle.com/otn/java/jdk/8u241-b07/1f5b5a70bf22433b84d0e960903adac8/jdk-8u241-linux-x64.tar.gz?AuthParam=1585407406_a8cffe5669b296011aa5166b19137155
+        wget http://enos.itcollege.ee/~jpoial/allalaadimised/jdk8/jdk-8u241-linux-x64.tar.gz
         sudo mkdir /usr/lib/jvm
         cd /usr/lib/jvm
         sudo tar -xvzf ~/Downloads/jdk-8u251-linux-x64.tar.gz
