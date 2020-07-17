@@ -41,5 +41,6 @@ jobs:
 
         cd ballerina-lang/tool-plugins/intellij/
         git checkout $BAL_VERSION
+        java -version
         ./gradlew buildPlugin 
         ./gradlew publishPlugin -PintellijPublishToken=${{ secrets.IDEA_TOKEN }}   
