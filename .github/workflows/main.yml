@@ -36,7 +36,7 @@ jobs:
           
     - name: Build and publish plugin
       run: |
-        version=1.2.6
+        version=1.2.5
         BAL_VERSION="v${version}"
 
         cd ballerina-lang/tool-plugins/intellij/
