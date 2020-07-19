@@ -40,7 +40,7 @@ jobs:
         BAL_VERSION="v${version}"
 
         cd ballerina-lang/tool-plugins/intellij/
-        git checkout $BAL_VERSION
+        git checkout tags/$BAL_VERSION -b intellij-plugin-branch
         java -version
         ./gradlew buildPlugin 
         ./gradlew publishPlugin -PintellijPublishToken=${{ secrets.IDEA_TOKEN }}   
