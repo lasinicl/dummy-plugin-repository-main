@@ -36,9 +36,10 @@ jobs:
           
     - name: Build and publish plugin
       run: |
-        version=1.2.5
+        version=1.2.6
         BAL_VERSION="v${version}"
 
+        git checkout $BAL_VERSION
         cd ballerina-lang/tool-plugins/intellij/
         java -version
         ./gradlew buildPlugin 
