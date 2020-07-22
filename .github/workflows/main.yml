@@ -40,5 +40,5 @@ jobs:
         BAL_VERSION="v${version}"
 
         cd ballerina-lang/tool-plugins/intellij
-        java -version
+        git checkout $BAL_VERSION
         ./gradlew buildPlugin 
