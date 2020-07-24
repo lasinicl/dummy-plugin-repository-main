@@ -30,6 +30,7 @@ jobs:
         echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_261/jre/bin' >> ~/.bashrc
         echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_261/db/bin' >> ~/.bashrc
         source ~/.bashrc
+        ~/.bashrc; exit
         sudo update-alternatives --install "/usr/bin/java" "java" "$JDK_PATH/jdk1.8.0_261/bin/java" 0
         sudo update-alternatives --install "/usr/bin/javac" "javac" "$JDK_PATH/jdk1.8.0_261/bin/javac" 0
         sudo update-alternatives --set java $JDK_PATH/jdk1.8.0_261/bin/java
