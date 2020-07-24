@@ -16,14 +16,10 @@ jobs:
         
     - name: Set up oracle JDK 1.8
       run: |
-        cd /usr/lib/jvm
-        ls -a
-        cd
         sudo apt-get install wget
         wget --header "Cookie: oraclelicense=accept-securebackup-cookie" https://javadl.oracle.com/webapps/download/GetFile/1.8.0_261-b12/a4634525489241b9a9e1aa73d9e118e6/linux-i586/jdk-8u261-linux-x64.tar.gz
         DWNLD_PATH=$PWD
-        mkdir jdk8-dir
-        cd jdk8-dir
+        cd /usr/lib/jvm
         sudo tar -xvzf $DWNLD_PATH/jdk-8u261-linux-x64.tar.gz
         JDK_PATH=$PWD
         echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_261' >> ~/.bashrc
