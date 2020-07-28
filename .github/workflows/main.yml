@@ -22,15 +22,9 @@ jobs:
         cd /usr/lib/jvm
         sudo tar -xvzf $DWNLD_PATH/jdk-8u261-linux-x64.tar.gz
         JDK_PATH=$PWD
-        echo 'export J2REDIR=$JDK_PATH/jdk1.8.0_261' >> ~/.bashrc
-        echo 'export J2REDIR=$JDK_PATH/jdk1.8.0_261/jre' >> ~/.bashrc
         echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_261' >> ~/.bashrc
-        echo 'export DERBY_HOME=$JDK_PATH/jdk1.8.0_261/db' >> ~/.bashrc
         echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_261/bin' >> ~/.bashrc
-        echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_261/jre/bin' >> ~/.bashrc
-        echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_261/db/bin' >> ~/.bashrc
         source ~/.bashrc
-        ~/.bashrc; exit
         sudo update-alternatives --install "/usr/bin/java" "java" "$JDK_PATH/jdk1.8.0_261/bin/java" 0
         sudo update-alternatives --install "/usr/bin/javac" "javac" "$JDK_PATH/jdk1.8.0_261/bin/javac" 0
         sudo update-alternatives --set java $JDK_PATH/jdk1.8.0_261/bin/java
@@ -49,5 +43,4 @@ jobs:
 
         cd ballerina-lang/tool-plugins/intellij
         git checkout $BAL_VERSION
-        pwd
         ./gradlew buildPlugin 
