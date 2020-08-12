@@ -27,9 +27,9 @@ jobs:
         sudo rm -rfv /usr/lib/jvm/*
         sudo tar -xvzf $DWNLD_PATH/jdk-8u261-linux-x64.tar.gz
         JDK_PATH=$PWD
-        echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_261' >> ~/.bashrc
-        echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_261/bin' >> ~/.bashrc
-        source ~/.bashrc
+        echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_261' >> ~/.bash_profile
+        echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_261/bin' >> ~/.bash_profile
+        source ~/.bash_profile
         java -version
         echo $JAVA_HOME
         cd $CURRENT_DIR
