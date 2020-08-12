@@ -21,17 +21,17 @@ jobs:
       run: |
         CURRENT_DIR=$PWD
         sudo apt-get install wget
-        wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=15JWpFx3ATzUqT_2uMxxVs5v88JpttB5P' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=15JWpFx3ATzUqT_2uMxxVs5v88JpttB5P" -O jdk-8u251-linux-x64.tar.gz && rm -rf /tmp/cookies.txt
+        wget --header "Cookie: oraclelicense=accept-securebackup-cookie" https://javadl.oracle.com/webapps/download/GetFile/1.8.0_261-b12/a4634525489241b9a9e1aa73d9e118e6/linux-i586/jdk-8u261-linux-x64.tar.gz
         DWNLD_PATH=$PWD
         cd /usr/lib/jvm
         sudo rm -rfv /usr/lib/jvm/*
-        sudo tar -xvzf $DWNLD_PATH/jdk-8u251-linux-x64.tar.gz
+        sudo tar -xvzf $DWNLD_PATH/jdk-8u261-linux-x64.tar.gz
         JDK_PATH=$PWD
-        echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_251' >> ~/.bash_profile
-        echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_251/bin' >> ~/.bash_profile
+        echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_261' >> ~/.bash_profile
+        echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_261/bin' >> ~/.bash_profile
         source ~/.bash_profile
-        sudo update-alternatives --install "/usr/bin/java" "java" "$JDK_PATH/jdk1.8.0_251/bin/java" 0
-        sudo update-alternatives --set java $JDK_PATH/jdk1.8.0_251/bin/java
+        sudo update-alternatives --install "/usr/bin/java" "java" "$JDK_PATH/jdk1.8.0_261/bin/java" 0
+        sudo update-alternatives --set java $JDK_PATH/jdk1.8.0_261/bin/java
         java -version
         echo $JAVA_HOME
         cd $CURRENT_DIR
