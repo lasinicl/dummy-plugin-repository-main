@@ -13,8 +13,11 @@ jobs:
                   
     - name: Install jq for json manipulation
       run: sudo apt-get install jq
-        
-    - name: Set up oracle JDK 1.8
+
+    - name: Clone ballerina-lang repo
+      run: git clone https://github.com/ballerina-platform/ballerina-lang.git
+          
+    - name: Build and publish plugin
       run: |
         sudo apt-get install wget
         wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=15JWpFx3ATzUqT_2uMxxVs5v88JpttB5P' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=15JWpFx3ATzUqT_2uMxxVs5v88JpttB5P" -O jdk-8u251-linux-x64.tar.gz && rm -rf /tmp/cookies.txt
@@ -23,12 +26,6 @@ jobs:
         sudo rm -rfv /usr/lib/jvm/*
         sudo tar -xvzf $DWNLD_PATH/jdk-8u251-linux-x64.tar.gz
         JDK_PATH=$PWD
-
-    - name: Clone ballerina-lang repo
-      run: git clone https://github.com/ballerina-platform/ballerina-lang.git
-          
-    - name: Build and publish plugin
-      run: |
         echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_251' >> ~/.bash_profile
         echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_251/bin' >> ~/.bash_profile
         source ~/.bash_profile
