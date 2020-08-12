@@ -33,7 +33,7 @@ jobs:
         sudo update-alternatives --set java $JDK_PATH/jdk1.8.0_251/bin/java
         java -version
         echo $JAVA_HOME
-        cd
+        echo $PWD
             
         version=1.2.6
         BAL_VERSION="v${version}"
