@@ -41,4 +41,5 @@ jobs:
 
         cd ballerina-lang/tool-plugins/intellij
         git checkout $BAL_VERSION
+        echo $JAVA_HOME
         ./gradlew buildPlugin 
