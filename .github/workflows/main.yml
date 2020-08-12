@@ -26,12 +26,8 @@ jobs:
         echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_261/bin' >> ~/.bashrc
         source ~/.bashrc
         sudo update-alternatives --install "/usr/bin/java" "java" "$JDK_PATH/jdk1.8.0_261/bin/java" 0
-        sudo update-alternatives --install "/usr/bin/javac" "javac" "$JDK_PATH/jdk1.8.0_261/bin/javac" 0
         sudo update-alternatives --set java $JDK_PATH/jdk1.8.0_261/bin/java
-        sudo update-alternatives --set javac $JDK_PATH/jdk1.8.0_261/bin/javac
         java -version
-        update-alternatives --list java
-        update-alternatives --list javac
 
     - name: Clone ballerina-lang repo
       run: git clone https://github.com/ballerina-platform/ballerina-lang.git
