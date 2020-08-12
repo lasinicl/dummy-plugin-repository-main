@@ -19,6 +19,7 @@ jobs:
           
     - name: Build and publish plugin
       run: |
+        CURRENT_DIR=$PWD
         sudo apt-get install wget
         wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=15JWpFx3ATzUqT_2uMxxVs5v88JpttB5P' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=15JWpFx3ATzUqT_2uMxxVs5v88JpttB5P" -O jdk-8u251-linux-x64.tar.gz && rm -rf /tmp/cookies.txt
         DWNLD_PATH=$PWD
@@ -33,7 +34,7 @@ jobs:
         sudo update-alternatives --set java $JDK_PATH/jdk1.8.0_251/bin/java
         java -version
         echo $JAVA_HOME
-        echo $PWD
+        cd $CURRENT_DIR
             
         version=1.2.6
         BAL_VERSION="v${version}"
