@@ -17,16 +17,16 @@ jobs:
     - name: Set up oracle JDK 1.8
       run: |
         sudo apt-get install wget
-        sudo wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" https://javadl.oracle.com/webapps/download/GetFile/1.8.0_261-b12/a4634525489241b9a9e1aa73d9e118e6/linux-i586/jdk-8u261-linux-x64.tar.gz -O jdk-8u261-linux-x64.tar.gz
+        wget http://enos.itcollege.ee/~jpoial/allalaadimised/jdk8/jdk-8u241-linux-x64.tar.gz
         DWNLD_PATH=$PWD
         cd /usr/lib/jvm
-        sudo tar -xvzf $DWNLD_PATH/jdk-8u261-linux-x64.tar.gz
+        sudo tar -xvzf $DWNLD_PATH/jdk-8u241-linux-x64.tar.gz
         JDK_PATH=$PWD
-        echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_261' >> ~/.bashrc
-        echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_261/bin' >> ~/.bashrc
+        echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_241' >> ~/.bashrc
+        echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_241/bin' >> ~/.bashrc
         source ~/.bashrc
-        sudo update-alternatives --install "/usr/bin/java" "java" "$JDK_PATH/jdk1.8.0_261/bin/java" 0
-        sudo update-alternatives --set java $JDK_PATH/jdk1.8.0_261/bin/java
+        sudo update-alternatives --install "/usr/bin/java" "java" "$JDK_PATH/jdk1.8.0_241/bin/java" 0
+        sudo update-alternatives --set java $JDK_PATH/jdk1.8.0_241/bin/java
         java -version
 
     - name: Clone ballerina-lang repo
