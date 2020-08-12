@@ -23,9 +23,8 @@ jobs:
         sudo rm -rfv /usr/lib/jvm/*
         sudo tar -xvzf $DWNLD_PATH/jdk-8u251-linux-x64.tar.gz
         JDK_PATH=$PWD
-        echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_251' >> ~/.bashrc
-        echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_251/bin' >> ~/.bashrc
-        source ~/.bashrc
+        echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_251'
+        echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_251/bin'
         sudo update-alternatives --install "/usr/bin/java" "java" "$JDK_PATH/jdk1.8.0_251/bin/java" 0
         sudo update-alternatives --set java $JDK_PATH/jdk1.8.0_251/bin/java
         java -version
