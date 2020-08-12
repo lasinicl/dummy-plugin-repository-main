@@ -30,8 +30,6 @@ jobs:
         echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_261' >> ~/.bash_profile
         echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_261/bin' >> ~/.bash_profile
         source ~/.bash_profile
-        sudo update-alternatives --install "/usr/bin/java" "java" "$JDK_PATH/jdk1.8.0_261/bin/java" 0
-        sudo update-alternatives --set java $JDK_PATH/jdk1.8.0_261/bin/java
         java -version
         echo $JAVA_HOME
         cd $CURRENT_DIR
