@@ -17,16 +17,16 @@ jobs:
     - name: Set up oracle JDK 1.8
       run: |
         sudo apt-get install wget
-        wget http://enos.itcollege.ee/~jpoial/allalaadimised/jdk8/jdk-8u241-linux-x64.tar.gz
+        wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=15JWpFx3ATzUqT_2uMxxVs5v88JpttB5P' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=15JWpFx3ATzUqT_2uMxxVs5v88JpttB5P" -O jdk-8u251-linux-x64.tar.gz && rm -rf /tmp/cookies.txt
         DWNLD_PATH=$PWD
         cd /usr/lib/jvm
-        sudo tar -xvzf $DWNLD_PATH/jdk-8u241-linux-x64.tar.gz
+        sudo tar -xvzf $DWNLD_PATH/jdk-8u251-linux-x64.tar.gz
         JDK_PATH=$PWD
-        echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_241' >> ~/.bashrc
-        echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_241/bin' >> ~/.bashrc
+        echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_251' >> ~/.bashrc
+        echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_251/bin' >> ~/.bashrc
         source ~/.bashrc
-        sudo update-alternatives --install "/usr/bin/java" "java" "$JDK_PATH/jdk1.8.0_241/bin/java" 0
-        sudo update-alternatives --set java $JDK_PATH/jdk1.8.0_241/bin/java
+        sudo update-alternatives --install "/usr/bin/java" "java" "$JDK_PATH/jdk1.8.0_251/bin/java" 0
+        sudo update-alternatives --set java $JDK_PATH/jdk1.8.0_251/bin/java
         java -version
 
     - name: Clone ballerina-lang repo
