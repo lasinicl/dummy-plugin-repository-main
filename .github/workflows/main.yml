@@ -23,6 +23,12 @@ jobs:
         sudo rm -rfv /usr/lib/jvm/*
         sudo tar -xvzf $DWNLD_PATH/jdk-8u251-linux-x64.tar.gz
         JDK_PATH=$PWD
+
+    - name: Clone ballerina-lang repo
+      run: git clone https://github.com/ballerina-platform/ballerina-lang.git
+          
+    - name: Build and publish plugin
+      run: |
         echo 'export JAVA_HOME=$JDK_PATH/jdk1.8.0_251' >> ~/.bash_profile
         echo 'export PATH=$PATH:$JDK_PATH/jdk1.8.0_251/bin' >> ~/.bash_profile
         source ~/.bash_profile
@@ -30,12 +36,7 @@ jobs:
         sudo update-alternatives --set java $JDK_PATH/jdk1.8.0_251/bin/java
         java -version
         echo $JAVA_HOME
-
-    - name: Clone ballerina-lang repo
-      run: git clone https://github.com/ballerina-platform/ballerina-lang.git
-          
-    - name: Build and publish plugin
-      run: |
+        
         version=1.2.6
         BAL_VERSION="v${version}"
 
