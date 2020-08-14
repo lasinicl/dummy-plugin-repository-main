@@ -33,7 +33,7 @@ jobs:
         echo $JAVA_HOME
         cd $CURRENT_DIR
             
-        version=1.2.6
+        version=1.2.4
         BAL_VERSION="v${version}"
 
         cd ballerina-lang/tool-plugins/intellij
