@@ -6,6 +6,8 @@ on:
 jobs:
   publish_idea_plugin:
     runs-on: ubuntu-latest
+    env:
+        publish_token: ${{ secrets.IDEA_TOKEN }}
 
     steps:
     - name: Checkout code
@@ -37,6 +39,4 @@ jobs:
         cd ballerina-lang/tool-plugins/intellij
         git checkout $BAL_VERSION
         ./gradlew buildPlugin
-        ./gradlew publishPlugin -Dorg.gradle.project.intellijPublishToken=${{ env.PUBLISH_TOKEN }}
-      env:
-        PUBLISH_TOKEN: ${{ secrets.IDEA_TOKEN }} 
+        ./gradlew publishPlugin -Dorg.gradle.project.intellijPublishToken=${{ env.publish_token }} 
