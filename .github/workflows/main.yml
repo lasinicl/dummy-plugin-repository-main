@@ -39,6 +39,7 @@ jobs:
 
         cd ballerina-lang/tool-plugins/intellij
         git checkout $BAL_VERSION
+        ./gradlew buildPlugin
         ./gradlew publishPlugin -Dorg.gradle.project.intellijPublishToken=$PUBLISH_TOKEN
       env:
         PUBLISH_TOKEN: ${{ secrets.IDEA_TOKEN }} 
