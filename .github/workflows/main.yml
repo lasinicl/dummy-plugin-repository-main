@@ -37,6 +37,8 @@ jobs:
         BAL_VERSION="v${version}"
 
         cd ballerina-lang/tool-plugins/intellij
+        PLUGIN_DIR=$PWD
         git checkout $BAL_VERSION
         ./gradlew buildPlugin
-        ./gradlew publishPlugin -Dorg.gradle.project.intellijPublishToken=${{ env.publish_token }} 
+        curl -i --header "Authorization: Bearer ${{ env.publish_token }}" -F pluginId=9520 -F file=@$PLUGIN_DIR/build/distributions/ballerina-intellij-idea-plugin-$version.zip -F channel=stable https://plugins.jetbrains.com/plugin/uploadPlugin
+        
