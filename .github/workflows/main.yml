@@ -41,5 +41,5 @@ jobs:
         git checkout $BAL_VERSION
         ./gradlew buildPlugin
         ls $PLUGIN_DIR/build/distributions/
-        curl -i --header "Authorization: Bearer ${{ env.publish_token }}" -F pluginId=9520 -F file=@$PLUGIN_DIR/build/distributions/ballerina-intellij-idea-plugin-$version.zip -F channel=stable https://plugins.jetbrains.com/plugin/uploadPlugin
+        curl -i --header "Authorization: Bearer ${{ env.publish_token }}" -F pluginId=13933 -F file=@$PLUGIN_DIR/build/distributions/ballerina-intellij-idea-plugin-$version.zip -F channel=stable https://plugins.jetbrains.com/plugin/uploadPlugin
         
